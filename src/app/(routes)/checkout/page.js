@@ -1,5 +1,7 @@
 import React from "react";
 
-export function Page() {
+function Page() {
   return <div>checkout</div>;
 }
+
+export default Page;

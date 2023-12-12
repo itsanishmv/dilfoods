@@ -1,7 +1,11 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Poppins } from "next/font/google";
+import Navbar from "./Features/components/Navbar";
+import Footer from "./Features/components/Footer";
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata = {
   title: "Dil foods",
@@ -11,7 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <Navbar />
+        <div className=" container mx-auto px-40">{children}</div>
+
+        <Footer />
+      </body>
     </html>
   );
 }

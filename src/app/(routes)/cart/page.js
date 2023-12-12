@@ -1,5 +1,6 @@
 import React from "react";
 
-export function Page() {
+function Page() {
   return <div>cart</div>;
 }
+export default Page;
