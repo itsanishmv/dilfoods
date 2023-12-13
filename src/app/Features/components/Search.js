@@ -6,7 +6,7 @@ function Search() {
     <div className="border border-black w-96 h-10 rounded-lg relative shadow-md shadow-primary-red ">
       <input
         className="w-full h-full rounded-lg px-5 outline-none "
-        type="search"
+        type="text"
         placeholder="Search products"
       />
       <Image

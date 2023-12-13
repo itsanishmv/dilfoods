@@ -17,9 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
-        <div className=" container mx-auto px-40">{children}</div>
-
-        <Footer />
+        <div className=" lg:container lg:mx-auto md:px-40 overflow-hidden relative">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
