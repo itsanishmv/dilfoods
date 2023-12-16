@@ -3,14 +3,17 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 function Product({ name, price, image, stars, id }) {
   const router = useRouter();
-  function handleNavigateToDetailsPage() {
+  function handleNavigateToDetailsPage(e) {
+    e.stopPropagation();
     router.push(`/productdetails/${id}`);
   }
-  function handleAddItem() {}
+  function handleAddItem(e) {
+    e.stopPropagation();
+  }
   return (
     <div
       onClick={handleNavigateToDetailsPage}
-      className=" shadow-lg rounded-lg"
+      className=" shadow-lg rounded-lg cursor-pointer"
     >
       <Image
         className=" hover:animate-pulse"
